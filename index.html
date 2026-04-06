@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Developer Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">DevStudio</div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Store</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="themeToggle">🌙</button>
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Building Premium Web Experiences</h1>
+  <p>Modern UI • Smooth Animations • Advanced JavaScript</p>
+  <button class="primary-btn">View Projects</button>
+</section>
+
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>I design and develop clean, modern, high-performance web applications using advanced front-end technologies.</p>
+</section>
+
+<section id="products" class="section reveal">
+  <h2>Developer Store</h2>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search products...">
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="tech">Tech</option>
+      <option value="design">Design</option>
+    </select>
+    <select id="sort">
+      <option value="default">Sort</option>
+      <option value="low">Price Low → High</option>
+      <option value="high">Price High → Low</option>
+    </select>
+  </div>
+
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 DevStudio. All rights reserved.
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar" id="cartSidebar">
+  <h3>Your Cart</h3>
+  <ul id="cartItems"></ul>
+  <button onclick="toggleCart()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
